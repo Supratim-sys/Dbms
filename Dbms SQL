@@ -1,0 +1,12 @@
+SQL> connect
+Enter user-name: SYSTEM
+Enter password:
+Connected.
+SQL> Create table ITEM10
+  2  (
+  3  ICODE varchar(5),
+  4  INAME varchar(20),
+  5  RATE number(6),
+  6  COLOUR varchar(10),
+  7  primary key(ICODE)
+  8  );
