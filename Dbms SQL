@@ -10,3 +10,12 @@ SQL> Create table ITEM10
   6  COLOUR varchar(10),
   7  primary key(ICODE)
   8  );
+Table created.
+
+SQL> desc ITEM10
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ICODE                                     NOT NULL VARCHAR2(5)
+ INAME                                              VARCHAR2(20)
+ RATE                                               NUMBER(6)
+ COLOUR                                             VARCHAR2(10)
