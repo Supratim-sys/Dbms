@@ -1,7 +1,5 @@
-SQL> connect
-Enter user-name: SYSTEM
-Enter password:
-Connected.
+//1) WRITE SQL CODE TO CREATE A TABLE “ITEM10”
+(ICODE,INAME,RATE,COLOR,PRIMARY KEY(ICODE))//
 SQL> Create table ITEM10
   2  (
   3  ICODE varchar(5),
@@ -12,6 +10,8 @@ SQL> Create table ITEM10
   8  );
 Table created.
 
+//2) WRITE SQL CODE TO ADD NEW ATTRIBUTE GST NUMBER(8).//
+
 SQL> desc ITEM10
  Name                                      Null?    Type
  ----------------------------------------- -------- ----------------------------
@@ -19,3 +19,31 @@ SQL> desc ITEM10
  INAME                                              VARCHAR2(20)
  RATE                                               NUMBER(6)
  COLOUR                                             VARCHAR2(10)
+
+SQL> ALTER TABLE ITEM10 ADD GST NUMBER(8) ;
+
+Table altered.
+
+SQL> desc ITEM10;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ICODE                                     NOT NULL VARCHAR2(5)
+ INAME                                              VARCHAR2(20)
+ RATE                                               NUMBER(6)
+ COLOUR                                             VARCHAR2(10)
+ GST                                                NUMBER(8)
+
+//4.HOW TO DROP ANY EXISISTING ATTRIBUTE.//
+SQL> ALTER TABLE ITEM10 DROP(COLOUR);
+
+Table altered.
+
+SQL> desc ITEM10;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ICODE                                     NOT NULL VARCHAR2(5)
+ INAME                                              VARCHAR2(40)
+ RATE                                               NUMBER(6)
+ GST                                                NUMBER(8)
+ 
+ //5.WRITE SQL CODE TO INSERT DATA INTO ITEM10//
